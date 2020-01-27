@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     def create
         return redirect_to ({controller: 'sessions', action: 'new'}) if params[:name] == nil || params[:name].empty?
         session[:name] = params[:name]
-        redirect to '/'
+        redirect_to '/'
     end
 
     def destroy
